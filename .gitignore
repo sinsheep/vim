@@ -1,0 +1,7 @@
+*.swap
+plugged/
+sessions/
+autoload/
+.netrwhist
+.ccls-chche/
+.ccls-cache/*
