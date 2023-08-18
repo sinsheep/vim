@@ -47,7 +47,7 @@ M.setup = function()
 		print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 	end, bufopts)
 	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, bufopts)
-	vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
+	-- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
 	-- show diagnostics in hover window
 	vim.api.nvim_create_autocmd("CursorHold", {
 		callback = function()

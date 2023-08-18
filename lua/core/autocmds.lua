@@ -34,3 +34,12 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 		end
 	end,
 })
+
+-- function toggleTodo()
+--     local line = vim.api.nvim_get_current_line()
+--     if string.match(line, "^%s*%-%s") then
+--         vim.api.nvim_set_current_line(string.gsub(line, "^%s*%-%s", ""))
+--     else
+--         vim.api.nvim_set_current_line("- []" .. line)
+--     end
+-- end

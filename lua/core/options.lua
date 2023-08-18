@@ -4,6 +4,8 @@ local options = {
     completeopt = { "menuone", "noselect" }, -- mostly just for cmp
     conceallevel = 0,                        -- so that `` is visible in markdown files
     fileencoding = "utf-8",                  -- the encoding written to a file
+    encoding = "utf-8",                      -- the encoding displayed
+    termencoding = "utf-8",                  -- set the encoding for the terminal
     hlsearch = true,                         -- highlight all matches on previous search pattern
     ignorecase = true,                       -- ignore case in search patterns
     mouse = "a",                             -- allow the mouse to be used in neovim
@@ -16,7 +18,7 @@ local options = {
     splitright = true,                       -- force all vertical splits to go to the right of current window
     swapfile = false,                        -- creates a swapfile
     termguicolors = true,                    -- set term gui colors (most terminals support this)
-    timeoutlen = 1000,                        -- time to wait for a mapped sequence to complete (in milliseconds)
+    timeoutlen = 500,                        -- time to wait for a mapped sequence to complete (in milliseconds)
     undofile = true,                         -- enable persistent undo
     updatetime = 300,                        -- faster completion (4000ms default)
     writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
@@ -40,26 +42,26 @@ end
 
 local g = vim.g
 local disabled_built_ins = {
-  "2html_plugin",
-  "getscript",
-  "getscriptPlugin",
-  "gzip",
-  "logipat",
-  "netrw",
-  "netrwPlugin",
-  "netrwSettings",
-  "netrwFileHandlers",
-  "matchit",
-  "matchparen",
-  "tar",
-  "tarPlugin",
-  "rrhelper",
-  "vimball",
-  "vimballPlugin",
-  "zip",
-  "zipPlugin",
+    "2html_plugin",
+    "getscript",
+    "getscriptPlugin",
+    "gzip",
+    "logipat",
+    "netrw",
+    "netrwPlugin",
+    "netrwSettings",
+    "netrwFileHandlers",
+    "matchit",
+    "matchparen",
+    "tar",
+    "tarPlugin",
+    "rrhelper",
+    "vimball",
+    "vimballPlugin",
+    "zip",
+    "zipPlugin",
 }
 
 for _, plugin in pairs(disabled_built_ins) do
-  g["loaded_" .. plugin] = 1
+    g["loaded_" .. plugin] = 1
 end

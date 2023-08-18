@@ -15,7 +15,7 @@ return {
             { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
             { "<leader>ff", Util.telescope("files"), desc = "Find Files (root dir)" },
             { "<leader>fF", Util.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
-            { "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
+            { "<leader>fh", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
             { "<leader>fR", Util.telescope("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent (cwd)" },
             -- git
             { "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "commits" },
